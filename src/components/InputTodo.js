@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 const InputTodo = (props) => {
   const [title, setTitle] = useState('');
-
+  const { addTodoProps } = props;
   const onChange = (e) => {
     setTitle(e.target.value);
   };
@@ -11,7 +11,7 @@ const InputTodo = (props) => {
   const handleSubmit = (e) => {
     if (title.trim()) {
       e.preventDefault();
-      props.addTodoProps(title);
+      addTodoProps(title);
       setTitle('');
     }
   };

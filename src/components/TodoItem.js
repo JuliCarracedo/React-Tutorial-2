@@ -5,7 +5,9 @@ import styles from './TodoItem.module.css';
 
 const TodoItem = (props) => {
   const [editing, setEditing] = useState(false);
-  const { todo } = props;
+  const {
+    todo, handleChangeProps, deleteTodoProps, setUpdate,
+  } = props;
   const { completed, id, title } = todo;
   const { item, checkbox, textInput } = styles;
 
@@ -41,14 +43,14 @@ const TodoItem = (props) => {
           className={checkbox}
           type="checkbox"
           checked={completed}
-          onChange={() => props.handleChangeProps(id)}
+          onChange={() => handleChangeProps(id)}
         />
 
         <span style={completed ? completedStyle : null}>
           {title}
         </span>
 
-        <button type="button" onClick={() => props.deleteTodoProps(id)}>
+        <button type="button" onClick={() => deleteTodoProps(id)}>
           Delete
         </button>
 
@@ -59,7 +61,7 @@ const TodoItem = (props) => {
         style={editMode}
         value={title}
         onChange={(e) => {
-          props.setUpdate(e.target.value, id);
+          setUpdate(e.target.value, id);
         }}
         onKeyDown={handleUpdatedDone}
       />
