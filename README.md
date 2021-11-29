@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# React To-do App
 
 > React-ToDo is an online To-Do list that allows you to add, edit and delete tasks to organize your day.
 
@@ -29,7 +29,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 
-- Clone this repository to any folder using ```git clone https://github.com/JuliCarracedo/react-todo.git``` on said folder.
+- Clone this repository to any folder using ```git clone https://github.com/JuliCarracedo/react-tutorial-2.git``` on said folder.
 - Open the created folder on your code editor
 
 ### Install
